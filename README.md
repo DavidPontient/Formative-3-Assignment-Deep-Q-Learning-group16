@@ -149,4 +149,4 @@ env.close()
 |---|---|---|---|---|---|---|---|---|
 | Shem Ayioka | exp01 | 1e-4 | 0.99 | 32 | 1.0 → 0.01, 100k | ~100k (114 episodes) | -21.0 | No improvement yet over a random agent; needs more steps |
 
-Add one row per experiment as group members run theirs.
+
