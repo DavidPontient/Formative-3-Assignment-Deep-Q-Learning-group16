@@ -18,8 +18,6 @@ dqn-atari/
 └── .python-version     # Python 3.11
 ```
 
-Each group member keeps their own experiments in a folder named after them (e.g. `shem_ayioka/`), with one `.pth` model and one `.csv` log per experiment.
-
 ## Setup
 
 Requires **Python 3.11+**. The project is managed with [uv](https://docs.astral.sh/uv/).
