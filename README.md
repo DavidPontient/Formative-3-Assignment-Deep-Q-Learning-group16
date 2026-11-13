@@ -7,6 +7,7 @@ Deep Q-Network agent trained on Atari Pong (`ALE/Pong-v5`) using Gymnasium and P
 - `train.py` - training script
 - `play.py` - watch a trained model play in a window
 - `evaluate.py` - score saved models without a window
+- `plot_training.py` - plots reward and episode length from a training log
 - `check_env.py` - checks the environment and GPU
 - `check_setup.py` - checks the Pong window and PyTorch work
 - `run_experiments.ps1` - runs David's experiments on Windows
@@ -74,5 +75,5 @@ uv run evaluate.py shem_ayioka/exp01.pth shem_ayioka/exp08.pth --episodes 5
 
 ## Results
 
-- Shem (learning rate x batch size): [shem_ayioka/results.md](shem_ayioka/results.md). Best model is `exp08` (lr 5e-5, batch 32), averaging +3.6 over 5 games.
+- Shem (learning rate x batch size): [shem_ayioka/Hyperparameter_experiment_results.md](shem_ayioka/Hyperparameter_experiment_results.md). Best model is `exp08` (lr 5e-5, batch 32), averaging +3.6 over 5 games.
 - Rachel (epsilon): [rachel_toronga/Hyperparameter_experiment_results.md](rachel_toronga/Hyperparameter_experiment_results.md)
