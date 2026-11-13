@@ -5,9 +5,14 @@ Deep Q-Network agent trained on Atari Pong (`ALE/Pong-v5`) using Gymnasium and P
 ## Files
 
 - `train.py` - training script
+- `play.py` - watch a trained model play in a window
+- `evaluate.py` - score saved models without a window
 - `check_env.py` - checks the environment and GPU
+- `check_setup.py` - checks the Pong window and PyTorch work
+- `run_experiments.ps1` - runs David's experiments on Windows
 - `notebooks/` - notebooks
-- `shem_ayioka/` - Shem's model and training log
+- `shem_ayioka/` - Shem's models, logs and results
+- `rachel_toronga/` - Rachel's results
 
 ## Setup
 
@@ -53,8 +58,21 @@ Run `uv run train.py --help` to see all options.
 
 The model is saved every 50,000 steps and at the end. The CSV log has one row per episode: `episode, episode_length, total_steps, reward, epsilon`.
 
+## Playing and evaluating
+
+Watch a model play:
+
+```bash
+uv run play.py --model shem_ayioka/exp08.pth --episodes 3
+```
+
+Score models with no window (5 games each, no exploration):
+
+```bash
+uv run evaluate.py shem_ayioka/exp01.pth shem_ayioka/exp08.pth --episodes 5
+```
+
 ## Results
 
-| Member | Exp | lr | gamma | batch | epsilon decay | Steps | Avg reward (last 10) |
-|---|---|---|---|---|---|---|---|
-| Shem Ayioka | exp01 | 1e-4 | 0.99 | 32 | 100k | ~100k | -21.0 |
+- Shem (learning rate x batch size): [shem_ayioka/results.md](shem_ayioka/results.md). Best model is `exp08` (lr 5e-5, batch 32), averaging +3.6 over 5 games.
+- Rachel (epsilon): [rachel_toronga/Hyperparameter_experiment_results.md](rachel_toronga/Hyperparameter_experiment_results.md)
