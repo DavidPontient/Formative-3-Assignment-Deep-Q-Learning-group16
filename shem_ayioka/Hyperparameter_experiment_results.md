@@ -53,3 +53,30 @@ Training performance of exp08 (episode length, steps and reward):
 ## Final configuration
 
 I chose **exp08 (lr 5e-5, batch 32, gamma 0.99, epsilon 1.0 -> 0.01 over 50,000 steps)**. It had the best eval score and was the only model with a positive average. Its curve was still rising at 250k steps, so it is the one trained longer to produce the final `dqn_model.pth`. exp02 has a higher training reward, but it plateaued in the middle of training and scored lower when playing greedily.
+
+## Final model (`dqn_model.pth`)
+
+exp08's configuration trained for 1,000,000 steps instead of 250,000. Everything else is the same. The model is saved in the repo root as `dqn_model.pth`, which `play.py` loads by default.
+
+| Steps | Episodes | Training reward (last 10) | Best episode | Eval (10 games) | Eval scores |
+|---|---|---|---|---|---|
+| 1,000,000 | 372 | 10.1 | 20 | **13.0** | 20, 10, 16, 7, 13, 11, 15, 16, 11, 11 |
+
+![Final model training](dqn_model_training.png)
+
+| Steps | Mean training reward | Mean episode length |
+|---|---|---|
+| 0 - 100k | -19.9 | 1,178 |
+| 100k - 200k | -16.8 | 2,577 |
+| 200k - 300k | -9.8 | 3,828 |
+| 300k - 400k | -9.7 | 3,702 |
+| 400k - 500k | -1.8 | 3,167 |
+| 500k - 600k | 2.3 | 3,194 |
+| 600k - 700k | 5.1 | 3,134 |
+| 700k - 800k | 5.4 | 3,091 |
+| 800k - 900k | 7.3 | 2,928 |
+| 900k - 1M | 9.3 | 2,857 |
+
+- Won all 10 eval games (+13.0 average), up from +3.6 for exp08 at 250k steps.
+- The average training reward passed 0 at about 500k steps and was still rising at 1M.
+- Episode length peaked at about 300k steps (~4,000 steps, long close games) and then dropped to about 2,900 as the agent started winning points faster.

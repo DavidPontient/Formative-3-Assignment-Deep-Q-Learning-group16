@@ -5,6 +5,7 @@ Deep Q-Network agent trained on Atari Pong (`ALE/Pong-v5`) using Gymnasium and P
 ## Files
 
 - `train.py` - training script
+- `dqn_model.pth` - final trained model (exp08 settings, 1M steps)
 - `play.py` - watch a trained model play in a window
 - `evaluate.py` - score saved models without a window
 - `plot_training.py` - plots reward and episode length from a training log
@@ -64,7 +65,7 @@ The model is saved every 50,000 steps and at the end. The CSV log has one row pe
 Watch a model play:
 
 ```bash
-uv run play.py --model shem_ayioka/exp08.pth --episodes 3
+uv run play.py --episodes 3
 ```
 
 Score models with no window (5 games each, no exploration):
@@ -75,5 +76,5 @@ uv run evaluate.py shem_ayioka/exp01.pth shem_ayioka/exp08.pth --episodes 5
 
 ## Results
 
-- Shem (learning rate x batch size): [shem_ayioka/Hyperparameter_experiment_results.md](shem_ayioka/Hyperparameter_experiment_results.md). Best model is `exp08` (lr 5e-5, batch 32), averaging +3.6 over 5 games.
+- Shem (learning rate x batch size): [shem_ayioka/Hyperparameter_experiment_results.md](shem_ayioka/Hyperparameter_experiment_results.md). Best was `exp08` (lr 5e-5, batch 32). Trained for 1M steps it became the final `dqn_model.pth`, which won all 10 eval games (average +13.0).
 - Rachel (epsilon): [rachel_toronga/Hyperparameter_experiment_results.md](rachel_toronga/Hyperparameter_experiment_results.md)
