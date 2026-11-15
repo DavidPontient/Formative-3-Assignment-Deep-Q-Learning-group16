@@ -180,7 +180,7 @@ The reward rises from about -20 to above 0 after roughly 400,000 steps, and the 
 ---
 
 ## 6. Gameplay Demonstration
-
+Video of the best trained agent: https://youtu.be/HcHAIyYoW0o 
 ### Playing and evaluating
 
 Watch a model play:
