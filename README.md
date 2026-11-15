@@ -2,7 +2,7 @@
 
 Deep Q-Network (DQN) agent trained on Atari Pong (`ALE/Pong-v5`) using Gymnasium and PyTorch. The DQN is implemented from scratch with `torch.nn`; no ready-made DQN library (Stable-Baselines3, RLlib, CleanRL, TorchRL) is used.
 
-- **Repository:** [add repository link]
+- **Repository:** https://github.com/DavidPontient/Formative-3-Assignment-Deep-Q-Learning-group16.git
 - **Presentation slot:** [add date and time booked with the Coach]
 
 ---
