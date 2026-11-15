@@ -35,7 +35,7 @@ The agent controls a paddle and plays against the built-in opponent. A game ends
 ---
 
 ## 2. DQN Architecture
-
+![architecture](images/architecture.png)
 ### Network Architecture
 
 **DQN Network Architecture**
@@ -53,7 +53,7 @@ The agent controls a paddle and plays against the built-in opponent. A game ends
 The network has about 1.69 million trainable parameters and is built with `torch.nn` without pretrained weights. Stacking 4 frames lets the network see the ball's direction and speed, which a single frame cannot show.
 
 ### Training Process
-
+![Training performance](images/final_model_training.png)
 **DQN Training Loop**
 
 1. **Interact.** At each step the agent chooses an action with **epsilon-greedy**: with probability epsilon a random action (exploration), otherwise the action with the highest predicted Q-value (exploitation). Epsilon decays linearly from its start value to its end value over a set number of steps, so the agent explores a lot early and exploits more later.
