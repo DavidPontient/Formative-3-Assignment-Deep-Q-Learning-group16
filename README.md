@@ -3,7 +3,7 @@
 Deep Q-Network (DQN) agent trained on Atari Pong (`ALE/Pong-v5`) using Gymnasium and PyTorch. The DQN is implemented from scratch with `torch.nn`; no ready-made DQN library (Stable-Baselines3, RLlib, CleanRL, TorchRL) is used.
 
 - **Repository:** https://github.com/DavidPontient/Formative-3-Assignment-Deep-Q-Learning-group16.git
-- **Presentation slot:** [add date and time booked with the Coach]
+- **Presentation slot:**
 
 ---
 
@@ -180,10 +180,6 @@ The reward rises from about -20 to above 0 after roughly 400,000 steps, and the 
 ---
 
 ## 6. Gameplay Demonstration
-
-Video of the best trained agent (`dqn_model.pth`) playing Pong with greedy actions:
-
-**[Add link to the gameplay video, or place the file at `gameplay/pong_best_agent.mp4`]**
 
 ### Playing and evaluating
 
